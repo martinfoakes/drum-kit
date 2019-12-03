@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Grafitti';
-  src: url('./fonts/TR-909.woff2'), format('woff2'),
-       url('./fonts/TR-909.woff'), format('woff'),
-       url('./fonts/TR_909.otf'), format('opentype');
+  src: url('./fonts/TR-909.woff2') format('woff2'),
+       url('./fonts/TR-909.woff') format('woff'),
+       url('./fonts/TR_909.otf') format('opentype');
   font-display: auto;
 }
 
