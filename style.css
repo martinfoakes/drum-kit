@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Grafitti';
+  src: url('./fonts/TR-909.woff2'), format('woff2'),
+       url('./fonts/TR-909.woff'), format('woff'),
+       url('./fonts/TR_909.otf'), format('opentype');
+  font-display: auto;
+}
+
 html {
   font-size: 10px;
   background: url('./img/audience.jpg') center;
@@ -7,7 +15,11 @@ html {
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Grafitti', sans-serif;
+}
+
+kbd {
+  font-family: 'Grafitti', sans-serif;
 }
 
 .drum-keys {
