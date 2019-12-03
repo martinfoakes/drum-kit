@@ -1,7 +1,7 @@
 html {
   font-size: 10px;
   background: url('./img/audience.jpg') center;
-  background-position: inherit;
+  background-position: top;
 }
 
 body,html {
