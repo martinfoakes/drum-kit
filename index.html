@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Drum Kit - Javascript</title>
+  <title>Drum Kit - VanillaJS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="drum-keys">
@@ -56,9 +57,23 @@
   <audio data-key="76" src="audio/boom.wav"></audio>
 
 <script>
+
   window.addEventListener('keydown', (e) => {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-  })
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing');
+  });
+
+  removeTransition = (e) => {
+    console.log(e);
+  };
+
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
 </script>
 </body>
 </html>
